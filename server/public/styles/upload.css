@@ -8,46 +8,10 @@ header {
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;*/
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     background-size: 100vw;
 
-}
-
-.navbar {
-    position: relative;
-    margin: 0px;
-    width: 100%;
-    overflow: hidden;
-    /* background-color: rgb(41, 41, 151); */
-    /* height: 7em; */
-}
-
-.nav-link {
-    position: relative;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .navbar {
-        float: none;
-        width: 100%;
-    }
-
-    .redessociales {
-        display: none;
-    }
-    .Map {
-        display: none;
-    }
-}
-
-.redessociales {
-    position: absolute;
-    right: 0;
-    top: 0px;
 }
 
 .imgheader {
@@ -57,6 +21,32 @@ header {
     color: black;
 }
 
+.redessociales {
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+.nav-link {
+    color: white !important ;
+}
+.nav-link:hover {
+    color: black !important;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        float: none;
+        width: 100%;
+    }
+
+    .redessociales {
+        display: none;
+    }
+}
 .imgRRSS {
     height: 30px;
     width: 30px;
@@ -68,7 +58,6 @@ header {
     left: 25em;
     right: 2em;
     top: 1em;
-    font-family: Georgia;
     font-weight: bold;
 
 }
@@ -82,11 +71,11 @@ header {
 }
 
 #verDestinos:hover {
-    background-color: rgb(29, 32, 117);
+    background-color: rgb(3, 5, 70);
     color: yellow;
 }
 
-/* prices */
+/* prices-------------------------------*/
 .flex-container {
     display: flex;
     justify-content: center;
@@ -95,20 +84,19 @@ header {
 
  .flex-container>div {
     background-color: #da17c0;
-    width: 100px;
+    width: 25px;
     margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    /* text-align: justify; */
+    line-height: 25px;
+    /* font-size: 30px; */
+    padding: 5px;
 }
 
 /* --Quien Somos -- */
-.container {
-    /* display: block; */
+.quienSomos {
     background-image: url(../images/travel_1.jpg);
-    /* background-repeat: no-repeat; */
-    background-size: cover;
     background-size: 100vw;
+    width: 100%;
     background-position: center;
 }
 
@@ -141,68 +129,73 @@ button:hover {
     color: rgb(3, 5, 70);
 }
 
-/* form with map */
-#container-input {
-    display: block;
-    border: none;
-}
-
-#form {
-    color: black;
+/* ContactStyle inputs-------------------------------- */
+input[type=text], select, textarea {
     width: 100%;
-}
-
-
-input[type=text],
-select,
-textarea {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    padding: 12px;
+    border: none;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-}
-
-.container-form {
+  }
+  
+  input[type=sendmsg] {
+    background-color: rgb(3, 5, 70);
     border: none;
-    background-color: white;
-    width: 97%;
-}
-
-#left {
-    float: left;
-    width: 50%;
-}
-
-#right {
-    float: right;
-    width: 50%;
-}
-
-#enviar {
-    background-color: yellow;
-    border: none;
-    color: rgb(3, 5, 70);
+    color: yellow;
     padding: 12px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
+    transition: 0.3s;
+   
+  }
+  
+  input[type=sendmsg]:hover {
+    background-color:yellow;
+    color: rgb(3, 5, 70);
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
 
-.Map {
-    margin-bottom: 100px;
-}
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
     .Map {
         display: none;
     }
 }
 
+/* Footer in separate footer.hbs file --------------------------------------*/
 footer {
     background: darkblue;
     font-weight: bold;

@@ -9,9 +9,3 @@ In mobile, the following sections should appear.
 
 Characteristics
 [ ]Bower must be used for the installation of the dependencies.
-The project must be uploaded in a vagrant container and must meet the following characteristics:
-[ ] There must be a vagrantfile with the conditions of the container.
-[ ]The container must have apache installed and configured with the application.
-[ ]The container must have installed git and pointing to the remote repository:
-[ ]It must be updatable with a simple git pull.
-[ ]The website must be visible from the host computer once the container has been lifted.

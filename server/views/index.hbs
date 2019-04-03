@@ -1,33 +1,47 @@
 <header>
-    <nav class="navbar navbar-expand-md">
-        {{!-- bg-light navbar-light --}}
-        <a class="logo">
-            <img class="imgheader" src="\images\iconoweb.png" />
-            <p>  GeeksHubs</p>
-            <p>  Travels</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img class="imgheader" src="\images\iconoweb.png" />
+            <p align="center"> GeeksHubs <br> Travels</p>
         </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Destinos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Quienes somos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Donde estamos</a>
-            </li>
-            {{!-- dropdown --}}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Destinos</a>
-                    <a class="dropdown-item" href="#">Quienes somos</a>
-                    <a class="dropdown-item" href="#">Donde estamos</a>
-                </div>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Donde estamos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    {{!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a> --}}
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Destinos</a>
+                        <a class="dropdown-item" href="#">Quienes somos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Donde estamos</a>
+                    </div>
+                </li>
+                {{!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> --}}
+            </ul>
+            {{!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> --}}
+        </div>
     </nav>
-    
+
 
     <div class="redessociales">
         <a href="">
@@ -60,21 +74,20 @@
 </header>
 <br>
 <section>
-{{!-- <div class="flex-container">
-  <div><img class="item" src="../images/tokyo.JPG" alt="tokyo"></div>
-  <div><img class="item" src="../images/beijing.jpg" alt="beijing"></div>
-  <div><img class="item" src="../images/new_york.JPG" alt="newyork"></div>  
-</div>
-<div class="flex-container">
-  <div><img class="item" src="../images/ciudad_mexico.JPG" alt="mexico"></div>
-  <div><img class="item" src="../images/buenos_aires.JPG" alt="buenosaires"></div>
-  <div><img class="item" src="../images/madrid.JPG" alt="madrid"></div>  
-</div> --}}
+    <div class="flex-container">
+        <div><img class="item" src="../images/tokyo.JPG" alt="tokyo"></div>
+        <div><img class="item" src="../images/beijing.jpg" alt="beijing"></div>
+        <div><img class="item" src="../images/new_york.JPG" alt="newyork"></div>
+    </div>
+    <div class="flex-container">
+        <div><img class="item" src="../images/ciudad_mexico.JPG" alt="mexico"></div>
+        <div><img class="item" src="../images/buenos_aires.JPG" alt="buenosaires"></div>
+        <div><img class="item" src="../images/madrid.JPG" alt="madrid"></div>
+    </div>
 </section>
 <br>
-
 <section>
-    <div class="container">
+    <div class="quienSomos">
         <div class="text-block">
             <h3><u> QUIEN SOMOS</u></h3>
             <p align="justify">GeeksHubs Travels es un agencia de viajes<br />
@@ -91,32 +104,31 @@
     </div>
 </section>
 
-<div class="container-form">
-    <img class="Map" src="\images\map.JPG" />
-    <div class="container-input">
-        <form action="action_page.php">
-
-            <p id="form" align="justify">E: enquiry@artiotravel.com<br>
-                P: 0264 123 4567<br><br>
-                Give us a call or drop by anytime, we endeavour to answer all<br>
-                enquiries within 24 hours on business days.<br><br>
-                We are open from 8.30 AM - 4.00 PM weekdays.</p>
-
-            <section id="left">
-                <input type="text" id="fname" name="firstname" placeholder="First name*">
-                <input type="text" id="phone" name="phonenumber" placeholder="Phone number*">
-            </section>
-
-            <aside id="right">
-                <input type="text" id="email" name="email" placeholder="Email*">
-                <input type="text" id="country" name="country" placeholder="Country*">
-            </aside></br></br></br>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            <p>*PLEASE COMPLETE ALL FIELDS CORRECTLY.</p>
-            <button id="enviar">Enviar Mensaje</button>
-
-        </form>
+    <div class="container">
+        <div style="text-align:center">
+            <p>E: enquiry@artiotravel.com<br>
+            P: 0264 123 4567<br><br>
+            Give us a call or drop by anytime, we endeavour to answer all<br>
+            enquiries within 24 hours on business days.<br><br>
+            We are open from 8.30 AM - 4.00 PM weekdays.</p>
+        </div>
+        <div class="row">
+            <div class="column"><img src="/images/map.jpg" style="width:100%"></div>
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Phone">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Country">
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea>
+                    <input type="sendmsg" value="Send Message">
+                </form>
+            </div>
+        </div>
     </div>
-</div>
-
-</body>
