@@ -4,13 +4,12 @@
 
 header {
     background-image: url(../images/nathan-anderson-316188-unsplash.jpg);
-    /*background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;*/
-    /* background-size: cover; */
     background-position: center;
     background-size: 100vw;
+    height: 500px;
+    background-repeat: no-repeat;
+    margin-left: 90px;
+    margin-right: 90px;
 
 }
 
@@ -23,30 +22,29 @@ header {
 
 .redessociales {
     position: absolute;
-    right: 0;
-    top: 0px;
+    right: 10px;
+    top: 5px;
 }
 
 .navbar {
-    background-color: transparent !important;
+    background-color: transparent;
 }
+
 .nav-link {
-    color: white !important ;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    margin-top: -3em !important;
+    margin-left: 120px !important;
+    padding: 0px;
+    color: white !important;
 }
+
 .nav-link:hover {
-    color: black !important;
+    color: rgb(3, 5, 70) !important;
 }
 
-@media (max-width: 700px) {
-    .navbar {
-        float: none;
-        width: 100%;
-    }
 
-    .redessociales {
-        display: none;
-    }
-}
 .imgRRSS {
     height: 30px;
     width: 30px;
@@ -54,10 +52,10 @@ header {
 }
 
 #viaja {
-    position: relative;
-    left: 25em;
+    position: absolute;
+    left: 35em;
     right: 2em;
-    top: 1em;
+    top: 9em;
     font-weight: bold;
 
 }
@@ -66,8 +64,12 @@ header {
     background-color: yellow;
     color: rgb(3, 5, 70);
     font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
     border: none;
     transition: 0.3s;
+    margin-left: 3em;
+
 }
 
 #verDestinos:hover {
@@ -80,37 +82,43 @@ header {
     display: flex;
     justify-content: center;
     background-color: white;
-} 
+}
 
- .flex-container>div {
+.flex-container>div {
     background-color: #da17c0;
     width: 25px;
     margin: 10px;
-    /* text-align: justify; */
     line-height: 25px;
-    /* font-size: 30px; */
     padding: 5px;
 }
 
-/* --Quien Somos -- */
+/* --Quien Somos ------------------------------------- */
 .quienSomos {
     background-image: url(../images/travel_1.jpg);
-    background-size: 100vw;
-    width: 100%;
     background-position: center;
-}
-
-.text-block {
-    position: left;
-    background-color: white;
-    color: black;
-    border: none;
+    background-size: 100vw;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
 u {
     text-decoration: none;
     border-bottom: 5px solid yellow;
 }
+.boxed {
+    
+    background-color: white;
+    border: none;
+    margin-top: 0px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: -20px;
+}
+
+
+
 
 button {
     background-color: rgb(3, 5, 70);
@@ -130,16 +138,18 @@ button:hover {
 }
 
 /* ContactStyle inputs-------------------------------- */
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: none;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
-  
-  input[type=sendmsg] {
+}
+
+input[type=sendmsg] {
     background-color: rgb(3, 5, 70);
     border: none;
     color: yellow;
@@ -149,55 +159,60 @@ input[type=text], select, textarea {
     display: inline-block;
     font-size: 16px;
     transition: 0.3s;
-   
-  }
-  
-  input[type=sendmsg]:hover {
-    background-color:yellow;
+
+}
+
+input[type=sendmsg]:hover {
+    background-color: yellow;
     color: rgb(3, 5, 70);
-  }
-  
-  /* Style the container/contact section */
-  .container {
+}
+
+/* Style the container/contact section */
+.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     color: black;
     padding: 10px;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .column {
+}
+
+/* Create two columns that float next to eachother */
+.column {
     float: left;
     width: 50%;
     margin-top: 6px;
     padding: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .redessociales {
+        display: none;
     }
-  }
 
+    .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 
-@media (max-width: 480px) {
     .Map {
         display: none;
     }
 }
 
+
+
+
 /* Footer in separate footer.hbs file --------------------------------------*/
-footer {
-    background: darkblue;
+/* footer {
+    background: rgb(3, 5, 70);
     font-weight: bold;
     box-align: center;
 }
@@ -205,7 +220,6 @@ footer {
 
 div {
     display: inline-block;
-    /*  border: 2px solid black; */
     padding: 20px;
     color: white;
     font-size: 15px;
@@ -223,4 +237,4 @@ li {
     position: absolute;
     right: -25em;
     bottom: 0px;
-}
+} */
