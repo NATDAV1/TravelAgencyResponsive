@@ -1,0 +1,122 @@
+<header>
+    <nav class="navbar navbar-expand-md">
+        {{!-- bg-light navbar-light --}}
+        <a class="logo">
+            <img class="imgheader" src="\images\iconoweb.png" />
+            <p>  GeeksHubs</p>
+            <p>  Travels</p>
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Destinos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Donde estamos</a>
+            </li>
+            {{!-- dropdown --}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Destinos</a>
+                    <a class="dropdown-item" href="#">Quienes somos</a>
+                    <a class="dropdown-item" href="#">Donde estamos</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <div class="redessociales">
+        <a href="">
+            <img class="imgRRSS" src="..\images\tt-ico.png" />
+        </a>
+        <a href="">
+            <img class="imgRRSS" src="..\images\ws-ico.png" />
+        </a>
+        <a href="">
+            <img class="imgRRSS" src="..\images\fb-ico.png" />
+        </a>
+        <a href="">
+            <img class="imgRRSS" src="..\images\insta.png" />
+        </a>
+        <a href="">
+            <img class="imgRRSS" src="..\images\linkedin.png" />
+        </a>
+        <a href="">
+            <img class="imgRRSS" src="..\images\youtube.png" />
+        </a>
+    </div>
+    </nav>
+    </div>
+
+    <div id="viaja">
+        <h1>Viaja!</h1>
+        <h2>Descubre lugares maravillosos</h2>
+        <button id="verDestinos">ver destinos</button>
+    </div>
+</header>
+<br>
+<section>
+{{!-- <div class="flex-container">
+  <div><img class="item" src="../images/tokyo.JPG" alt="tokyo"></div>
+  <div><img class="item" src="../images/beijing.jpg" alt="beijing"></div>
+  <div><img class="item" src="../images/new_york.JPG" alt="newyork"></div>  
+</div>
+<div class="flex-container">
+  <div><img class="item" src="../images/ciudad_mexico.JPG" alt="mexico"></div>
+  <div><img class="item" src="../images/buenos_aires.JPG" alt="buenosaires"></div>
+  <div><img class="item" src="../images/madrid.JPG" alt="madrid"></div>  
+</div> --}}
+</section>
+<br>
+
+<section>
+    <div id="container">
+        <div class="text-block">
+            <h3><u> QUIEN SOMOS</u></h3>
+            <p align="justify">GeeksHubs Travels es un agencia de viajes<br />
+                online creada en 2009 por un equipo de viaje-<br />
+                ros entusiastas que deciden hacer de su<br />
+                pasion por conocer el mundo un modo de<br />
+                vida. Desde nuestros inicios hemos diseflado<br />
+                mas de 500 viajes organizados a diferentes<br />
+                destinos de Europa. Norteamerica y Asia.<br />
+                Nuestro objectivo ahora es ir ampliando hori-<br />
+                zontes poco a poco.</p>
+            <button>DESCUBRIR</button>
+        </div>
+    </div>
+</section>
+
+<div class="container-form">
+    <img class="Map" src="\images\map.JPG" />
+    <div class="container-input">
+        <form action="action_page.php">
+
+            <p id="form" align="justify">E: enquiry@artiotravel.com<br>
+                P: 0264 123 4567<br><br>
+                Give us a call or drop by anytime, we endeavour to answer all<br>
+                enquiries within 24 hours on business days.<br><br>
+                We are open from 8.30 AM - 4.00 PM weekdays.</p>
+
+            <section id="left">
+                <input type="text" id="fname" name="firstname" placeholder="First name*">
+                <input type="text" id="phone" name="phonenumber" placeholder="Phone number*">
+            </section>
+
+            <aside id="right">
+                <input type="text" id="email" name="email" placeholder="Email*">
+                <input type="text" id="country" name="country" placeholder="Country*">
+            </aside></br></br></br>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <p>*PLEASE COMPLETE ALL FIELDS CORRECTLY.</p>
+            <button id="enviar">Enviar Mensaje</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
