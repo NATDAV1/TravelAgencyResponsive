@@ -103,7 +103,7 @@ header {
 }
 
 /* --Quien Somos -- */
-#container {
+.container {
     /* display: block; */
     background-image: url(../images/travel_1.jpg);
     /* background-repeat: no-repeat; */
@@ -112,7 +112,7 @@ header {
     background-position: center;
 }
 
-#container > text {
+.text-block {
     position: left;
     background-color: white;
     color: black;

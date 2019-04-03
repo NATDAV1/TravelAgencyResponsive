@@ -34,8 +34,7 @@ app.get('/', (req, res) => {
         admin: {
             name: 'Natasha',
             fullName: 'Natasha Davis'
-        },
-        layout: 'template'
+        }
     });
 });
 

@@ -84,8 +84,8 @@ router.put('/users/:user_id', (req, res) => {
 });
 
 // register.hbs info
-router.get('/', function (req, res, next) {
-    res.render('index', {
+router.get('/register', function (req, res, next) {
+    res.render('register', {
         title: 'Express'
     });
 });
@@ -138,4 +138,4 @@ router.get('/', function (req, res, next) {
 //         res.render( 'login', {error: 'Invalid login'});
 //     })
 // });
-// module.exports = router;
+ module.exports = router;
