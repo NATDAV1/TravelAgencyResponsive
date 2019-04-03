@@ -1,0 +1,21 @@
+{
+  "name": "trvl-agency-mobile",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "NATDAV1 <adn10siv@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./server/public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
