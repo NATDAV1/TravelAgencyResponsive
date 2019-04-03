@@ -1,0 +1,17 @@
+We continue treating it as a SPA.
+In mobile, the following sections should appear.
+[ ]Header with upper menu that will change color and apply a transparent background so that in the white area can be seen.
+[ ]A carrousel should appear with different images in the header, the sidebars will be hidden to change and points will be placed horizontally to indicate the change of slide.
+[ ]In the section trips will become a view of carrousel type where the user clicking on the arrows can change from one trip to another, will not have automatic start but the iteration will occur when the user presses any of the side arrows. In addition, these arrows must look good and have a sufficient size to make their use feasible.
+[ ]In the section about who we are, the background image will disappear and only one color will appear with the description.
+[ ]The location section is not visible in mobile.
+[ ]The footer should be equal to the one in the image.
+
+Characteristics
+[ ]Bower must be used for the installation of the dependencies.
+The project must be uploaded in a vagrant container and must meet the following characteristics:
+[ ] There must be a vagrantfile with the conditions of the container.
+[ ]The container must have apache installed and configured with the application.
+[ ]The container must have installed git and pointing to the remote repository:
+[ ]It must be updatable with a simple git pull.
+[ ]The website must be visible from the host computer once the container has been lifted.
