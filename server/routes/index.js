@@ -83,59 +83,58 @@ router.put('/users/:user_id', (req, res) => {
     })
 });
 
-// register.hbs info
+// register.hbs partials info --------------------------------------------
+
 router.get('/register', function (req, res, next) {
     res.render('register', {
         title: 'Sign Up'
     });
 });
+// ***FIX ISSUES
 
-// router.get('/register') ***FIX ISSUES
-// router.render('/register', function (req, res, next) {
-//     res.render('register');
-// });
-// router.post('/register', function (req, res, next) {
-//     console.log(req.body);
-//     new User(req.body)
-//         .save()
-//         .then(() => {
-//             console.log('valid user');
-//             res.render('register', {
-//                 message: 'This user already exists'
-//             });
 
-//         })
-//         .catch((err) => {
-//             console.log('invalid registration');
-//             res.render('invalid registration', {
-//                 error: err.message
-//             });
-//         })
-// });
+router.post('/register', function (req, res, next) {
+    console.log(req.body);
+    new User(req.body)
+        .save()
+        .then(() => {
+            console.log('valid user');
+            res.render('register', {
+                message: 'User already exists'
+            });
+
+        })
+        .catch((err) => {
+            console.log('invalid registration');
+            res.render('invalid registration', {
+                error: 'Something went wrong, try again'
+            });
+        })
+});
 
 // Login page **** FIX ISSUES
-// router.get( '/login', function (req, res, next) {
-//     console.log(req.body);
-//     res.render('login');
-// })
-// router.post('/login', function (req, res, next) {
-//     console.log( req.body);
-//     User.findOne(req.body)
-//     .then((user) => {
-//         console.log( 'valid login', user);
-//         if(user) {
-//             res.render( ( 'login', {message: 'Welcome'});
-         
-//     });
-//     else{
-//         res.render()
-//     }
-//     .then(() => {
-//         console.log( 'valid login');
-//         res.render( 'login', {message: 'Welcome'});
-//     .catch((err) => {
-//         console.log( 'invalid login', err);
-//         res.render( 'login', {error: 'Invalid login'});
-//     })
-// });
- module.exports = router;
+router.get('/login', function (req, res, next) {
+    console.log(req.body);
+    res.render('login');
+})
+router.post('/login', function (req, res, next) {
+    User.findOne(req.body)
+        .then((user) => {
+            console.log('valid login', user);
+            if (user) {
+                res.render('login', {
+                    message: 'Welcome'
+                });
+
+            } else {
+                res.render('login', {
+                    error: 'Invalid login'
+                })
+
+            }
+
+        })
+
+})
+
+module.exports = router;
