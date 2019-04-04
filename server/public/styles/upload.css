@@ -5,9 +5,14 @@
 header {
     background-image: url(../images/nathan-anderson-316188-unsplash.jpg);
     background-position: center;
-    background-size: 100vw;
-    height: 500px;
+    background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .imgheader {
@@ -17,14 +22,12 @@ header {
     color: black;
 }
 
-.redessociales {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-}
+
 
 .navbar {
-    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(3, 5, 70);
 }
 
 .nav-link {
@@ -43,34 +46,30 @@ header {
 }
 
 .viaja {
-    position: absolute;
-    left: 35em;
-    right: 2em;
-    top: 9em;
     font-weight: bold;
 
 }
 
-#verDestinos {
-    position: absolute;
+button {
     background-color: yellow;
-    color: rgb(3, 5, 70);
-    font-style: italic;
-    font-weight: bold;
-    font-size: 20px;
     border: none;
+    color: rgb(3, 5, 70);
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
-    margin-left: 3em;
-
 }
 
-#verDestinos:hover {
+button:hover {
     background-color: rgb(3, 5, 70);
     color: yellow;
 }
 
 /* prices-------------------------------*/
-.flex-container {
+/* .flex-container {
     display: flex;
     justify-content: center;
     background-color: white;
@@ -82,14 +81,15 @@ header {
     margin: 10px;
     line-height: 25px;
     padding: 5px;
-}
+} */
 /* --Quien Somos ---------------------------------------------------- */
 .quienSomos {
     background-image: url(../images/travel_1.jpg);
     background-position: center;
     background-size: 100vw;
-    height: 400px;
-    margin-top: 0px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
     background-repeat: no-repeat;
 }
 
@@ -97,32 +97,17 @@ u {
     text-decoration: none;
     border-bottom: 5px solid yellow;
 }
-.boxed {
-    
+
+.quienSomosContent {
+    margin: 3em;
+    width: 40%;
     background-color: white;
     border: none;
-    margin-top: -40px;
-    margin-left: 60px;
-    margin-right: 900px;
-    margin-bottom: -20px;
-    padding: 10px;
-    overflow: hidden;
-}
-button {
-    background-color: rgb(3, 5, 70);
-    border: none;
-    color: yellow;
-    padding: 12px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: 0.3s;
+    padding: 1em;
 }
 
-button:hover {
-    background-color: yellow;
-    color: rgb(3, 5, 70);
+.quienSomosContent p {
+    text-align: justify;
 }
 
 /* Contact Style inputs------------------------------------------------------- */
@@ -163,65 +148,52 @@ input[type=sendmsg]:hover {
     padding: 10px;
 }
 
-/* Create two columns that float next to eachother */
+/* Create two columns that flex next to eachother */
 .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 7em;
+    padding-top: 2em;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.namephone {
-    float: left;
-    width: 48%;
-}
-.emailcountry {
-    float: right;
-    width: 48%;
-}
+
+
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 700px) {
-    header {
-        background-image: 100vw;
-    }
-    .quienSomos {
+@media (max-width: 990px) {
+    header .quienSomos {
         background-image: none;
     }
+
+    .quienSomosContent {
+        width: unset;
+    }
+
+    .container-input {
+        display: none;
+    }
+
     .redessociales {
         display: none;
     }
-
-   .container-input {
-        display: none;
-    }
 }
 
-
-
-
 /* Footer in separate footer.hbs file --------------------------------------*/
-/* footer {
+footer {
     background: rgb(3, 5, 70);
     font-weight: bold;
     box-align: center;
 }
 
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    flex-wrap: wrap;
+}
 
-div {
-    display: inline-block;
-    padding: 20px;
-    color: white;
-    font-size: 15px;
-    position: relative;
-    text-align: center;
-
+ul {
+    all: unset;
 }
 
 li {
@@ -229,8 +201,9 @@ li {
     text-align: left;
 }
 
-.redessociales2 {
-    position: absolute;
-    right: -25em;
-    bottom: 0px;
-} */
+.register {
+    background-image: url(../images/journeys.jpg);
+    padding-top: 12em;
+    padding: 10em;
+
+}

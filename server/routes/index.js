@@ -86,7 +86,7 @@ router.put('/users/:user_id', (req, res) => {
 // register.hbs info
 router.get('/register', function (req, res, next) {
     res.render('register', {
-        title: 'Express'
+        title: 'Sign Up'
     });
 });
 
