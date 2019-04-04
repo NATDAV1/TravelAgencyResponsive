@@ -8,9 +8,6 @@ header {
     background-size: 100vw;
     height: 500px;
     background-repeat: no-repeat;
-    margin-left: 90px;
-    margin-right: 90px;
-
 }
 
 .imgheader {
@@ -31,12 +28,6 @@ header {
 }
 
 .nav-link {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly;
-    margin-top: -3em !important;
-    margin-left: 120px !important;
-    padding: 0px;
     color: white !important;
 }
 
@@ -51,7 +42,7 @@ header {
     border-width: 50%;
 }
 
-#viaja {
+.viaja {
     position: absolute;
     left: 35em;
     right: 2em;
@@ -61,6 +52,7 @@ header {
 }
 
 #verDestinos {
+    position: absolute;
     background-color: yellow;
     color: rgb(3, 5, 70);
     font-style: italic;
@@ -91,16 +83,14 @@ header {
     line-height: 25px;
     padding: 5px;
 }
-
-/* --Quien Somos ------------------------------------- */
+/* --Quien Somos ---------------------------------------------------- */
 .quienSomos {
     background-image: url(../images/travel_1.jpg);
     background-position: center;
     background-size: 100vw;
     height: 400px;
+    margin-top: 0px;
     background-repeat: no-repeat;
-    margin-left: 90px;
-    margin-right: 90px;
 }
 
 u {
@@ -111,15 +101,13 @@ u {
     
     background-color: white;
     border: none;
-    margin-top: 0px;
+    margin-top: -40px;
     margin-left: 60px;
-    margin-right: 60px;
+    margin-right: 900px;
     margin-bottom: -20px;
+    padding: 10px;
+    overflow: hidden;
 }
-
-
-
-
 button {
     background-color: rgb(3, 5, 70);
     border: none;
@@ -137,7 +125,7 @@ button:hover {
     color: rgb(3, 5, 70);
 }
 
-/* ContactStyle inputs-------------------------------- */
+/* Contact Style inputs------------------------------------------------------- */
 input[type=text],
 select,
 textarea {
@@ -168,7 +156,7 @@ input[type=sendmsg]:hover {
 }
 
 /* Style the container/contact section */
-.container {
+.container-input {
     border-radius: 5px;
     background-color: #f2f2f2;
     color: black;
@@ -189,20 +177,28 @@ input[type=sendmsg]:hover {
     display: table;
     clear: both;
 }
+.namephone {
+    float: left;
+    width: 48%;
+}
+.emailcountry {
+    float: right;
+    width: 48%;
+}
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media (max-width: 700px) {
+    header {
+        background-image: 100vw;
+    }
+    .quienSomos {
+        background-image: none;
+    }
     .redessociales {
         display: none;
     }
 
-    .column,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-
-    .Map {
+   .container-input {
         display: none;
     }
 }
