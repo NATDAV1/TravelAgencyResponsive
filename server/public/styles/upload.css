@@ -204,7 +204,12 @@ li {
 .register {
     background-image: url(../images/journeys.jpg);
     padding-top: 12em;
-    padding: 10em 25vw;
-    
+    padding: 10em 30vw;
+}
 
+.login {
+    background-image: url(../images/plane-login.jpeg);
+    background-position: center;
+    padding-top: 12em;
+    padding: 10em 30vw;
 }

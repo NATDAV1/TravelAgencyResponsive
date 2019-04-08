@@ -83,15 +83,13 @@ router.put('/users/:user_id', (req, res) => {
     })
 });
 
-// register.hbs partials info --------------------------------------------
+// register.hbs partials file info --------------------------------------------
 
 router.get('/register', function (req, res, next) {
     res.render('register', {
         title: 'Sign Up'
     });
 });
-// ***FIX ISSUES
-
 
 router.post('/register', function (req, res, next) {
     console.log(req.body);
@@ -112,7 +110,7 @@ router.post('/register', function (req, res, next) {
         })
 });
 
-// Login page **** FIX ISSUES
+// Login page -------------------------------------------------------
 router.get('/login', function (req, res, next) {
     console.log(req.body);
     res.render('login');
@@ -130,11 +128,8 @@ router.post('/login', function (req, res, next) {
                 res.render('login', {
                     error: 'Invalid login'
                 })
-
             }
-
         })
-
 })
 
 module.exports = router;
